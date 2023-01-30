@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
 
 package tp04.metier;
 
@@ -15,7 +15,7 @@ import java.util.Objects;
 public abstract class Action {
     
     private String libelle;
-
+    
     /**
      * Get the value of libelle
      *
@@ -24,11 +24,11 @@ public abstract class Action {
     public String getLibelle() {
         return libelle;
     }
-
+    
     public Action(String libelle) {
         this.libelle = libelle;
     }
-
+    
     public abstract float valeur(Jour j);
     
     @Override
@@ -37,7 +37,7 @@ public abstract class Action {
         hash = 53 * hash + Objects.hashCode(this.libelle);
         return hash;
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -52,7 +52,7 @@ public abstract class Action {
         }
         return true;
     }
-
+    
     public String toString() {
         return this.getLibelle();
     }
